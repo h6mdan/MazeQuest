@@ -254,9 +254,14 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-12 left-12 scale-75 origin-top-left z-20">
-          <MillionCodersLogo compact={true} />
-        </div>
+        <div className="absolute top-12 left-12 z-20">
+  <img
+    src="/Million-Coders-White-text.svg"
+    alt="Million Coders"
+    className="w-40 h-auto"
+  />
+</div>
+
 
         <div className="z-10 text-center flex flex-col items-center max-w-4xl">
           <div className="mb-16 flex flex-col items-center group cursor-default">
