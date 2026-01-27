@@ -101,7 +101,14 @@ const App: React.FC = () => {
 
   const runAction = useCallback(async (spriteId: string, block: Block): Promise<{ x: number, y: number }> => {
     setActiveBlockId(block.id);
-    const soundsMap = { [BlockType.MOVE_UP]: 'up', [BlockType.MOVE_DOWN]: 'down', [BlockType.MOVE_LEFT]: 'left', [BlockType.MOVE_RIGHT]: 'right' };
+    const soundsMap: Record<BlockType, string | undefined> = {
+  [BlockType.MOVE_UP]: 'up',
+  [BlockType.MOVE_DOWN]: 'down',
+  [BlockType.MOVE_LEFT]: 'left',
+  [BlockType.MOVE_RIGHT]: 'right',
+  [BlockType.WAIT]: undefined, // ✅ ADD THIS
+};
+
     if (soundsMap[block.type]) playSound(soundsMap[block.type] as any);
 
     let finalX = 0, finalY = 0;
