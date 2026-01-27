@@ -1,0 +1,8 @@
+{
+  "name": "MazeQuest - Code learning for kids",
+  "description": "An interactive, visual coding environment for kids to learn programming through events, motion, and sounds, inspired by the Scratch interface.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
