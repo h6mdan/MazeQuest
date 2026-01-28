@@ -324,13 +324,23 @@ const App: React.FC = () => {
     <div className="flex flex-col h-screen bg-[#020617] text-slate-300 font-medium overflow-hidden select-none">
       <header className={`bg-[#0f172a] border-b ${gameState.level.theme.borderColor} p-4 flex justify-between items-center shadow-2xl z-20`}>
         <div className="flex items-center gap-6">
-          <div onClick={() => { resetGame(); setView('menu'); }} className="flex items-center gap-4 cursor-pointer hover:opacity-80 transition-opacity">
-            <MillionCodersIcon className="w-10 h-10 shadow-lg" />
-            <div>
-              <h1 className="text-lg font-bold text-white tracking-tight leading-none">Million Coders</h1>
-              <p className={`text-[9px] font-bold uppercase tracking-widest mt-1 ${gameState.level.theme.accentColor}`}>MazeQuest • {gameState.level.theme.name}</p>
-            </div>
-          </div>
+          <div
+  onClick={() => { resetGame(); setView('menu'); }}
+  className="flex flex-col cursor-pointer hover:opacity-80 transition-opacity"
+>
+  <img
+    src="/Million-Coders-White-text.svg"
+    alt="Million Coders"
+    className="w-32 h-auto"
+  />
+
+  <p
+    className={`text-[9px] font-bold uppercase tracking-widest mt-1 ${gameState.level.theme.accentColor}`}
+  >
+    MazeQuest • {gameState.level.theme.name}
+  </p>
+</div>
+
           <div className="h-10 w-px bg-slate-700 mx-2" />
           <div className="flex items-center gap-2">
             <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mr-2">Level</span>
