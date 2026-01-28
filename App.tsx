@@ -258,7 +258,7 @@ const App: React.FC = () => {
   <img
     src="/Million-Coders-White-text.svg"
     alt="Million Coders"
-    className="w-40 h-auto"
+    className="w-20 h-auto"
   />
 </div>
 
